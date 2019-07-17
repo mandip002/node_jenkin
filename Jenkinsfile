@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
     agent {
         docker {
             image 'node:6-alpine'
@@ -6,17 +6,17 @@ pipeline{
         }
     }
     environment {
-        CI = 'true'
+        CI = 'true' 
     }
     stages {
-        stage('Build'){
+        stage('Build') {
             steps {
                 sh 'npm install'
             }
         }
-        stage('Test'){
+        stage('Test') { 
             steps {
-                sh './jenkins/scripts/test.sh'
+                sh './jenkins/scripts/test.sh' 
             }
         }
     }
